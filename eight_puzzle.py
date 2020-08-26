@@ -60,7 +60,7 @@ class EightPuzzle(SearchProblem):
         return 1
 
 
-# print(breadth_first(EightPuzzle(initial_state), graph_search=True, viewer=BaseViewer()).state)
+print(breadth_first(EightPuzzle(initial_state), graph_search=True, viewer=BaseViewer()).state)
 
 methods = (
     breadth_first,
