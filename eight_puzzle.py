@@ -60,6 +60,8 @@ class EightPuzzle(SearchProblem):
         return 1
 
 
+# print(breadth_first(EightPuzzle(initial_state), graph_search=True, viewer=BaseViewer()).state)
+
 methods = (
     breadth_first,
     depth_first,
@@ -83,15 +85,15 @@ for method in methods:
     problem = EightPuzzle(initial_state)
     result = method(problem, graph_search=False, viewer=visor)
 
-    # print('Final State:')
-    # print(result.state)
+    print('Final State:')
+    print(result.state)
 
     print('-' * 50)
 
-    # for action, state in result.path():
-    #     print('Action: ', action)
-    #     print('Resultant State: ', state)
+    for action, state in result.path():
+        print('Action: ', action)
+        print('Resultant State: ', state)
 
     print('Statistics:')
-    # print('Number of actions:', len(result.path()))
+    print('Number of actions:', len(result.path()))
     print(visor.stats)
