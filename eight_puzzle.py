@@ -78,10 +78,10 @@ methods = (
 # result = methods[0](problem, graph_search=True, viewer=WebViewer())
 
 print('Initial State')
-print(print_state(initial_state))
+print_state(initial_state)
 print()
 print('Goal State')
-print(print_state(goal_state))
+print_state(goal_state)
 
 for method in methods:
     print()
@@ -93,15 +93,15 @@ for method in methods:
     result = method(problem, graph_search=True, viewer=visor)
 
     print('Final State:')
-    print(print_state(result.state))
+    print_state(result.state)
 
     print('-' * 50)
 
     for action, state in result.path():
-        print('Zero moves to: ', action)
+        print('Zero will move to: ', action)
         print()
         print('Resultant State: ')
-        print(print_state(state))
+        print_state(state)
 
     print()
     print('Statistics:')
