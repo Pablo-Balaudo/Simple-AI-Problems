@@ -17,13 +17,13 @@ class NameOfTheProblem(SearchProblem):
         return current_state == goal_state
 
     def actions(self, current_state):
-        possible_states = []
+        possible_values = []
         # returns a list of possible values the next state1 can take
-        return possible_states
+        return possible_values
 
     def result(self, current_state, action_to_do):
         # convert tuple to list
-        # new_current_state = list(state)
+        # new_current_state = list(current_state)
         # modify new_current_state
         # convert list to tuple
         # new_current_state = tuple(new_current_state)
@@ -42,7 +42,7 @@ methods = (
 )
 
 problem = NameOfTheProblem(initial_state)
-result = methods[0](problem, graph_search=True, viewer=WebViewer())
+# result = methods[0](problem, graph_search=True, viewer=WebViewer())
 
 print('Initial State ', initial_state)
 print()
@@ -64,8 +64,10 @@ for method in methods:
 
     for action, state in result.path():
         print('Action: ', action)
+        print()
         print('Resultant State: ', state)
 
+    print()
     print('Statistics: ')
     print('Number of actions: ', len(result.path()))
     print(visor.stats)
